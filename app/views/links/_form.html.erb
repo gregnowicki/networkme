@@ -1,25 +1,13 @@
-<%= form_for @link, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :organization, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :organization, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :goal, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :goal, :class => 'text_field' %>
-    </div>
-  </div>
+<%= simple_form_for @link, :html => { :class => 'form-horizontal' } do |f| %>
+
+
+	<%= f.input :name %>
+  <%= f.input :organization %>
+  
+  <%= f.input :goal %>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.button :submit %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 links_path, :class => 'btn' %>
   </div>

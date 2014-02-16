@@ -15,6 +15,8 @@ gem 'devise'
 
 gem 'sqlite3'
 
+gem 'simple_form'
+
 
 
 
